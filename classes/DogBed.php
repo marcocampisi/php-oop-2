@@ -16,7 +16,10 @@ class DogBed extends Product
     public function printCard()
     {
         parent::printCard();
-        echo "<p>$this->size</p>";
-        echo "<p>$this->color</p>";
+        echo "<div class='card-footer'>";
+            echo "<p>$this->size</p>";
+            echo "<p>$this->color</p>";
+        echo "</div>";
+        echo "</div>";
     }
 }

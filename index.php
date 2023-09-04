@@ -20,9 +20,11 @@
 
 
     $food1 = new Food("[1]", "Croccantini per cani", 15.99, "cani", 100);
-    $toy1 = new Toy("[2]", "Palla per cani", 4.99, "cani", "gomma");
+    $food2 = new Food("[2]", "Croccantini per gatti", 19.99, "gatti", 150);
+    $toy1 = new Toy("[3]", "Palla per cani", 4.99, "cani", "gomma");
 
     $food1->printCard();
+    $food2->printCard();
     $toy1->printCard();
     ?>
 </body>

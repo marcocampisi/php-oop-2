@@ -14,6 +14,9 @@ class Food extends Product
     public function printCard()
     {
         parent::printCard();
-        echo "<p>$this->weight g</p>";
+        echo "<div class='card-footer'>";
+            echo "<p>$this->weight g</p>";
+        echo "</div>";
+        echo "</div>";
     }
 }

@@ -14,6 +14,9 @@ class Toy extends Product
     public function printCard()
     {
         parent::printCard();
-        echo "<p>$this->material</p>";
+        echo "<div class='card-footer'>";
+            echo "<p>$this->material</p>";
+        echo "</div>";
+        echo "</div>";
     }
 }
