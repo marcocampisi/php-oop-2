@@ -7,12 +7,12 @@ class Product {
     public $price;
     public $category;
 
-    public function __construct($id, $image, $title, $price, $category) {
+    public function __construct($id, $title, $price, $category, $image = null) {
         $this->id = $id;
-        $this->image = $image;
         $this->title = $title;
         $this->price = $price;
         $this->category = $category;
+        $this->image = $image;
     }
 
     public function printCard() {

@@ -5,8 +5,8 @@ class DogBed extends Product {
     public $size;
     public $color;
 
-    public function __construct($id, $image, $title, $price, $category, $size, $color) {
-        parent::__construct($id, $image, $title, $price, $category);
+    public function __construct($id, $title, $price, $category, $size, $color, $image = null) {
+        parent::__construct($id, $title, $price, $category, $image);
         $this->size = $size;
         $this->color = $color;
     }
