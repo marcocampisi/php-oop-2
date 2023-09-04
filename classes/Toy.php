@@ -14,5 +14,3 @@ class Toy extends Product {
         echo "<p>$this->material</p>";
     }
 }
-
-?>
