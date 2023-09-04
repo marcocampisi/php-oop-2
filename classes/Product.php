@@ -20,7 +20,7 @@ class Product {
         echo "<img src='$this->image' alt='$this->title'>";
         echo "<h3>$this->title</h3>";
         echo "<p>$this->price €</p>";
-        echo "<span>$this->category</span>";
+        echo "<span>$this->category</span>"; //TO-DO visualizzare icona cane o gatto qui
         echo "</div>";
     }
 }
