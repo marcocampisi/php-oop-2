@@ -8,6 +8,7 @@ class Food extends Product {
     public function __construct($id, $image, $title, $price, $category, $weight, $animal) {
         parent::__construct($id, $image, $title, $price, $category);
         $this->weight = $weight;
+        $this->animal = $animal;
     }
 
     public function printCard() {
