@@ -2,6 +2,8 @@
 
 class Product
 {
+    use IconTrait;
+
     public $id;
     public $image;
     public $title;
@@ -20,13 +22,7 @@ class Product
     public function printCard()
     {
 
-        if ($this->category == "cani") {
-            $icon = "fas fa-dog";
-        } else if ($this->category == "gatti") {
-            $icon = "fas fa-cat";
-        } else {
-            $icon = " fas fa-question-circle";
-        }
+        $icon = $this->calculateIcon($this->category);
         echo "<div class='card m-3' style='width: 18rem;'>";
         echo "<img src='$this->image' class='card-img-top' alt='$this->title'>";
         echo "<div class='card-body'>";
@@ -34,5 +30,19 @@ class Product
         echo "<p class='card-text'>$this->price €</p>";
         echo "<span class='fa $icon text-muted'></span>";
         echo "</div>";
+    }
+}
+
+trait IconTrait
+{
+    public function calculateIcon($category)
+    {
+        if ($category == "cani") {
+            return "fas fa-dog";
+        } elseif ($category == "gatti") {
+            return "fas fa-cat";
+        } else {
+            return "fas fa-question-circle";
+        }
     }
 }
