@@ -22,14 +22,24 @@ class Product
     public function printCard()
     {
 
-        $icon = $this->calculateIcon($this->category);
-        echo "<div class='card m-3' style='width: 18rem;'>";
-        echo "<img src='$this->image' class='card-img-top' alt='$this->title'>";
-        echo "<div class='card-body'>";
-        echo "<h5 class='card-title'>$this->title</h5>";
-        echo "<p class='card-text'>$this->price €</p>";
-        echo "<span class='fa $icon text-muted'></span>";
-        echo "</div>";
+        try {
+
+            $icon = $this->calculateIcon($this->category);
+
+            if (empty($this->image)) {
+                throw new Exception("Nessuna immagine specificata per il prodotto: $this->title");
+            }
+
+            echo "<div class='card m-3' style='width: 18rem;'>";
+            echo "<img src='$this->image' class='card-img-top' alt='$this->title'>";
+            echo "<div class='card-body'>";
+            echo "<h5 class='card-title'>$this->title</h5>";
+            echo "<p class='card-text'>$this->price €</p>";
+            echo "<span class='fa $icon text-muted'></span>";
+            echo "</div>";
+        } catch (Exception $e) {
+            echo 'Errore: ' . $e->getMessage();
+        }
     }
 }
 
