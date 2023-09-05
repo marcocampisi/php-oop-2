@@ -20,8 +20,8 @@
 
 
     $food1 = new Food("[1]", "Croccantini per cani", 15.99, "cani", 100);
-    $food2 = new Food("[2]", "Croccantini per gatti", 19.99, "gatti", 150);
-    $toy1 = new Toy("[3]", "Palla per cani", 4.99, "cani", "gomma");
+    $food2 = new Food("[2]", "Croccantini per gatti", 19.99, "gatti", 150, "https://www.lalettiera.it/wp-content/uploads/2020/05/migliori-crocchette-per-gatti.png");
+    $toy1 = new Toy("[3]", "Palla per cani", 4.99, "cani", "gomma", "https://www.animalhouseitalia.it/15814-large_default/ferribiella-palla-fuxtreme-ultrasuoni-per-cani-taglia-media.jpg");
 
     $food1->printCard();
     $food2->printCard();
